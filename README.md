@@ -26,6 +26,7 @@
 
 ## TODO
 
+- [x] Visibility toggle auto-focus control by passing `ref`
 - [x] Immediate fix: take out AI command and Send feedback from the default slash items
 - [ ] Slash commands:
   - [ ] Take SlashCommand out of the default list of extensions - the SlashCommand will take in a list of default extensions
