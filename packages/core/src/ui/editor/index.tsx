@@ -1,6 +1,13 @@
 "use client";
 
-import { ForwardedRef, forwardRef, useEffect, useRef, useState } from "react";
+import {
+  ForwardedRef,
+  MutableRefObject,
+  forwardRef,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import { useEditor, EditorContent, JSONContent } from "@tiptap/react";
 import { defaultEditorProps } from "./props";
 import { defaultExtensions } from "./extensions";
@@ -83,7 +90,7 @@ function Editor(
      */
     disableLocalStorage?: boolean;
   },
-  ref: ForwardedRef<EditorClass | null> | null
+  ref: ForwardedRef<EditorClass> | null
 ) {
   const [content, setContent] = useLocalStorage(storageKey, defaultValue);
 
@@ -150,7 +157,7 @@ function Editor(
 
   useEffect(() => {
     if (ref && editor) {
-      ref.current = editor;
+      (ref as MutableRefObject<EditorClass>).current = editor;
     }
   }, [editor, ref]);
 
