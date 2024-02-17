@@ -1,10 +1,7 @@
-<a href="https://novel.sh">
-  <img alt="Novel-plus is a fork of [Novel](https://github.com/steven-tey/novel), which is Notion-style WYSIWYG editor with AI-powered autocompletions." src="https://novel.sh/opengraph-image.png">
-  <h1 align="center">Novel-plus</h1>
-</a>
+<h1 align="center">Novel-plus</h1>
 
 <p align="center">
-  Novel-plus is a modified version of Novel, a WYSIWYG editor, with enhanced extensibility.. 
+  Novel-plus is a modified version of Novel, a WYSIWYG editor, with enhanced extensibility.
 </p>
 
 <p align="center">
@@ -19,10 +16,7 @@
   <a href="#introduction"><strong>Introduction</strong></a> ·
   <a href="#installation"><strong>Installation</strong></a> ·
   <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#setting-up-locally"><strong>Setting Up Locally</strong></a> ·
-  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-  <a href="#contributing"><strong>Contributing</strong></a> ·
-  <a href="#license"><strong>License</strong></a>
+  <a href="#setting-up-locally"><strong>Setting Up Locally</strong></a>
 </p>
 <br/>
 
@@ -30,13 +24,20 @@
 
 [Novel](https://novel.sh/) is a Notion-style WYSIWYG editor with AI-powered autocompletions.
 
-https://github.com/cheuno-dev/novel-plus/assets/28986134/2099877f-4f2b-4b1c-8782-5d803d63be5c
+## TODO
 
-<br />
+- [x] Immediate fix: take out AI command and Send feedback from the default slash items
+- [ ] Slash commands:
+  - [ ] Take SlashCommand out of the default list of extensions - the SlashCommand will take in a list of default extensions
+  - [ ] Allow renderer to take in custome renderer
+  - [ ] Pass slashCommandItems as props to the React component
+  - [ ] Maintain a default list of items for now - take out AI command and send feedback from it
+- [ ] Bubble map:
+  - [ ] Maintain a props map like `{enableColorChange: true}` that toggles each of the default option, enable editor to take in this prop
 
 ## Installation
 
-To use Novel in a project, you can run the following command to install the `novel` [NPM package](https://www.npmjs.com/package/novel):
+To use Novel-plus in a project, you can run the following command to install the `novel` [NPM package](https://www.npmjs.com/package/novel):
 
 ```
 npm i novel-plus
@@ -67,7 +68,7 @@ The `Editor` is a React component that takes in the following props:
 | `storageKey`          | `string`                    | The key to use for storing the editor's value in local storage.                                                                                                                                 | `novel__content`                                                                                                                    |
 | `disableLocalStorage` | `boolean`                   | Enabling this option will prevent read/write content from/to local storage.                                                                                                                     | `false`                                                                                                                             |
 
-> **Note**: Make sure to define an API endpoint that matches the `completionApi` prop (default is `/api/generate`). This is needed for the AI autocompletions to work. Here's an example: https://github.com/cheuno-dev/novel-plus/blob/main/apps/web/app/api/generate/route.ts
+> **Note**: Make sure to define an API endpoint that matches the `completionApi` prop (default is `/api/generate`). This is needed for the AI autocompletions to work. Here's an example: <https://github.com/cheuno-dev/novel-plus/blob/main/apps/web/app/api/generate/route.ts>
 
 ## Setting Up Locally
 
@@ -86,14 +87,4 @@ pnpm build
 pnpm dev
 ```
 
-## Tech Stack
-
-Novel is built on the following stack:
-
-- [Next.js](https://nextjs.org/) – framework
-- [Tiptap](https://tiptap.dev/) – text editor
-- [OpenAI](https://openai.com/) - AI completions
-- [Vercel AI SDK](https://sdk.vercel.ai/docs) – AI library
-- [Vercel](https://vercel.com) – deployments
-- [TailwindCSS](https://tailwindcss.com/) – styles
-- [Cal Sans](https://github.com/calcom/font) – font
+  <img alt="Novel-plus is a fork of [Novel](https://github.com/steven-tey/novel), which is Notion-style WYSIWYG editor with AI-powered autocompletions." src="https://novel.sh/opengraph-image.png">
