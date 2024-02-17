@@ -1,7 +1,7 @@
 {
   "name": "novel-plus",
-  "version": "0.1.21",
-  "description": "Notion-style WYSIWYG editor with AI-powered autocompletions",
+  "version": "0.1.23",
+  "description": "Modified Novel with extensibility - Notion-style WYSIWYG editor with AI-powered autocompletions",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

@@ -1,6 +1,5 @@
 {
   "name": "novel-plus",
-  "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
